@@ -5,13 +5,15 @@
 </head>
 <body>
 	<h1>Time Zone Converter</h1>
+
 	<div class="input-area">
 		<p>Enter and Select timezone:</p>
-		<input type="time" id="input-time">
+		<input type="date" id="input-date" placeholder="yyyy-mm-dd">
+		<input type="time" id="input-time" placeholder="hh:mm">
 		<select id="zone-time">
  			 <option value="PST">PST</option>
   			 <option value="UTC/GMT">UTC/GMT</option>
- 			 <option value="JST">JST</option>
+ 			 <option value="JST/KST">JST/KST</option>
  			 <option value="EST">EST</option>
 		</select>
 
@@ -22,7 +24,7 @@
 
 	<div class="output-area">
 		<p>Time in Malaysia: </p>
-		<output type="time" id="output-time">00:00</output>
+		<output type="time" id="output-time">--:--</output>
 		
 		<br/>
 
