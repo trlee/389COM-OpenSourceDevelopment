@@ -2,7 +2,6 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="timezone.css">
-	<script type="text/javascript" src="timezone.js"></script>
 </head>
 <body>
 	<h1>Time Zone Converter</h1>
@@ -14,16 +13,23 @@
   			 <option value="UTC/GMT">UTC/GMT</option>
  			 <option value="JST">JST</option>
  			 <option value="EST">EST</option>
-		</select><br/>
-	</div>
+		</select>
 
-	<button type="button" id="convert-time" onclick="timeConvert()">Convert</button>
-	<button type="button" id="switch-time" onclick="timeSwitch()">24 Hours Mode</button>	
+		<br/>
+
+		<button type="button" id="convert-time" onclick="timeConvert()">Convert</button>
+	</div>	
 
 	<div class="output-area">
 		<p>Time in Malaysia: </p>
 		<output type="time" id="output-time">00:00</output>
+		
+		<br/>
+
+		<button type="button" id="switch-time" onclick="timeSwitch()">24 Hours Mode</button>
 	</div>
+	
+	<script type="text/javascript" src="timezone.js"></script>
 
 </body>
 
