@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="timezone.css">
+	<script type="text/javascript" src="timezone.js"></script>
+</head>
+<body>
+	<h1>Time Zone Converter</h1>
+	<div class="input-area">
+		<p>Enter and Select timezone:</p>
+		<input type="time" id="input-time">
+		<select id="zone-time">
+ 			 <option value="PST">PST</option>
+  			 <option value="UTC/GMT">UTC/GMT</option>
+ 			 <option value="JST">JST</option>
+ 			 <option value="EST">EST</option>
+		</select><br/>
+	</div>
+
+	<button type="button" id="convert-time" onclick="timeConvert()">Convert</button>
+	<button type="button" id="switch-time" onclick="timeSwitch()">24 Hours Mode</button>	
+
+	<div class="output-area">
+		<p>Time in Malaysia: </p>
+		<output type="time" id="output-time">00:00</output>
+	</div>
+
+</body>
+
+</html>
