@@ -1,0 +1,18 @@
+{
+
+  "manifest_version": 2,
+  "name": "TimeZone",
+  "version": "1.0",
+  "applications": {
+    "gecko": {
+      "strict_min_version": "54.0a1"
+    }
+   },
+
+  "browser_action": {
+    "default_title" : "TimeZone",
+    "default_popup": "timezone.html"
+  }
+
+
+}

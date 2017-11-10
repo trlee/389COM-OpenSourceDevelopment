@@ -2,16 +2,18 @@
 function timeConvert(){
 
 	//test date
-	var year = new Date().getFullYear();
-	var month = new Date().getMonth();
-	var day = new Date().getDate();
+	//var year = new Date().getFullYear();
+	//var month = new Date().getMonth();
+	//var day = new Date().getDate();
 	
 	//get input
 	var dateselected = document.getElementById("input-time").value;
 	var zoneselected = document.getElementById("zone-time").value.toString();
 	var selected = document.getElementById("input-date").value;
 
-	var d = new Date(year, month, day, 0, 0, 0, 0);	
+	//split input value to date format
+	var d = new Date(selected.split("-")[0], selected.split("-")[1], selected.split("-")[2], dateselected.split(":")[0], dateselected.split(":")[1], 0, 0);	
+	
 
 	//PST
 	if (zoneselected == "PST"){
