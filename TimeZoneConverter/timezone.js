@@ -11,29 +11,34 @@ function timeConvert(){
 	var zoneselected = document.getElementById("zone-time").value.toString();
 	var selected = document.getElementById("input-date").value;
 
-	//test print value
-	document.getElementById("output-time").value=document.getElementById("input-time").value;
-
+	var d = new Date(year, month, day, 0, 0, 0, 0);	
 
 	//PST
 	if (zoneselected == "PST"){
-
+		d.setHours(d.getHours() + 16);
+		d.setMonth(d.getMonth() - 1);
 	}
 	
 	//UTC GMT
 	if (zoneselected == "UTC"){
-		
+		d.setHours(d.getHours() + 8);
+		d.setMonth(d.getMonth() - 1);
 	}
 
 	//JST KST
 	if (zoneselected == "JST"){
-		
+		d.setHours(d.getHours() - 1);
+		d.setMonth(d.getMonth() - 1);
 	}
 
 	//EST
 	if (zoneselected == "EST"){
-	
+		d.setHours(d.getHours() + 13);
+		d.setMonth(d.getMonth() - 1);
 	}
+	
+	//output converted time
+	document.getElementById("output-time").innerHTML = d;
 
 }
 
