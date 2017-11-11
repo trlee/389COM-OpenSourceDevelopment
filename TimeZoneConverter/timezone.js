@@ -1,4 +1,6 @@
 var passingDate;
+var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour12:true, hour: '2-digit', minute:'2-digit' };
+var options2 = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour12:false, hour: '2-digit', minute:'2-digit' };
 
 function timeConvert(){
 
@@ -40,8 +42,10 @@ function timeConvert(){
 		d.setMonth(d.getMonth() - 1);
 	}
 	
+	passingDate = d;
+
 	//test time format
-	d = d.toLocaleString();	
+	d = d.toLocaleString('en-GB',options);	
 
 	//output converted time
 	document.getElementById("output-time").innerHTML = d;
@@ -56,7 +60,7 @@ function timeSwitch(){
 
 		var mode12 = passingDate;
 
-		mode12 = mode12.toLocaleString();	
+		mode12 = mode12.toLocaleString('en-GB',options2);	
 		document.getElementById("output-time").innerHTML = mode12;
 
 		toggle++;
@@ -66,7 +70,7 @@ function timeSwitch(){
 
 		var mode24 = passingDate;
 
-		mode24 = mode24.toLocaleString();	
+		mode24 = mode24.toLocaleString('en-GB',options);	
 		document.getElementById("output-time").innerHTML = mode24;
 
 		toggle++;
