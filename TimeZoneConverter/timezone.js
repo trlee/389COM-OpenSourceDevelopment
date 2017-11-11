@@ -1,3 +1,4 @@
+var passingDate;
 
 function timeConvert(){
 
@@ -39,6 +40,9 @@ function timeConvert(){
 		d.setMonth(d.getMonth() - 1);
 	}
 	
+	//test time format
+	d = d.toLocaleString();	
+
 	//output converted time
 	document.getElementById("output-time").innerHTML = d;
 
@@ -49,10 +53,22 @@ var toggle = 0;
 function timeSwitch(){
 	if (toggle%2 ==0){
 		document.getElementById("switch-time").innerHTML="12 Hours Mode";
+
+		var mode12 = passingDate;
+
+		mode12 = mode12.toLocaleString();	
+		document.getElementById("output-time").innerHTML = mode12;
+
 		toggle++;
 	}
 	else{
 		document.getElementById("switch-time").innerHTML="24 Hours Mode";
+
+		var mode24 = passingDate;
+
+		mode24 = mode24.toLocaleString();	
+		document.getElementById("output-time").innerHTML = mode24;
+
 		toggle++;
 	}	
 }
