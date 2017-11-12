@@ -36,4 +36,37 @@ h1 {
     	cursor: pointer;
 } 
 
+.input-area {
+	padding: 10px;
+	border: 2px solid darkorange;
+ 	border-radius: 8px;
+}
+
+.output-area {
+	padding: 10px;
+	border: 2px solid darkorange;
+    	border-radius: 8px;
+}
+
+#input-time {
+	padding: 3px;
+	font-size: 16px;
+	margin: 5px;
+}
+
+#input-date {
+	padding: 3px;
+	font-size: 16px;
+}
+
+#zone-time {
+	padding: 6.5px;
+	font-size: 16px;
+	
+}
+
+#output-time {
+	padding: 3px;
+	font-size: 16px;
+}
 
