@@ -2,6 +2,9 @@ var passingDate;
 var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour12:true, hour: '2-digit', minute:'2-digit' };
 var options2 = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour12:false, hour: '2-digit', minute:'2-digit' };
 
+document.getElementById('convert-time').addEventListener('click', timeConvert);
+document.getElementById('switch-time').addEventListener('click', timeSwitch);
+
 function timeConvert(){
 
 	//test date
@@ -55,7 +58,9 @@ function timeConvert(){
 var toggle = 0;
 
 function timeSwitch(){
+
 	if (toggle%2 ==0){
+
 		document.getElementById("switch-time").innerHTML="12 Hours Mode";
 
 		var mode12 = passingDate;
@@ -66,6 +71,7 @@ function timeSwitch(){
 		toggle++;
 	}
 	else{
+
 		document.getElementById("switch-time").innerHTML="24 Hours Mode";
 
 		var mode24 = passingDate;
