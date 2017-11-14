@@ -11,7 +11,7 @@ h1 {
 
 
 #convert-time {
-	background-color: darkorange;
+	background-color: orange;
     	border: none;
     	color: white;
     	padding: 15px 37px;
@@ -21,10 +21,21 @@ h1 {
     	font-size: 16px;
     	margin: 12px 2px;
     	cursor: pointer;
+	box-shadow: 3px 3px 5px #999;
+}
+
+#convert-time:hover {
+	background-color: darkorange;
+}
+
+#convert-time:active {
+	background-color: darkorange;
+	box-shadow: 1px 3px 5px #999;
+	transform: translateY(2px);
 }
 
 #switch-time {
-	background-color: darkorange;
+	background-color: orange;
     	border: none;
     	color: white;
     	padding: 15px 10px;
@@ -33,8 +44,20 @@ h1 {
     	display: inline-block;
     	font-size: 16px;
     	margin: 12px 2px;
-    	cursor: pointer;
+	cursor: pointer;
+    	box-shadow: 3px 3px 5px #999;
 } 
+
+#switch-time:hover {
+	background-color: darkorange;
+}
+
+#switch-time:active {
+	background-color: darkorange;
+	box-shadow: 1px 3px 5px #999;
+	transform: translateY(2px);
+	
+}
 
 .input-area {
 	padding: 10px;
