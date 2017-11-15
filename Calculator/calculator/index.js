@@ -53,6 +53,43 @@ TODO:
     // When: Equals is clicked. Calculate result
     var displayResults = function ()
     {
+        // Convert string input to numbers
+        oldNum = parseFloat(oldNum);
+        currentNum = parseFloat(currentNum);
+
+        // Perform operation
+        switch (operator) {
+            case "plus":
+                resultNum = oldNum + currentNum;
+                break;
+            case "minus":
+                resultNum = oldNum - currentNum;
+                break;
+            case "times":
+                resultNum = oldNum * currentNum;
+                break;
+            case "divided by":
+                resultNum = oldNum / currentNum;
+                break;
+                // If equal is pressed without an operator, keep number and continue
+            default:
+                resultNum = currentNum;
+        }
+        // If NaN or Infinity returned
+        if (!isFinite(resultNum)) {
+            if (isNaN(resultNum)) {
+                resultNum = "Please do not use two operands in a single calculation";
+            }
+            else {
+                resultNum = "Please do not divide by 0";
+            }
+        }
+        // Display result, finally!
+        viewer.innerHTML = resultNum;
+        equals.setAttribute("data-result", resultNum);
+        // Now reset oldNum & keep result
+        oldNum = 0;
+        currentNum = resultNum;
     };
 
     // When: Clear button is pressed. Clear everything
@@ -68,6 +105,11 @@ TODO:
     // Add click event to numbers
     for (var i = 0, l = nums.length; i < l; i++) {
         nums[i].onclick = setNum;
+    }
+
+    // Add click event to operators
+    for (var i = 0, l = ops.length; i < l; i++) {
+        ops[i].onclick = moveNum;
     }
 
     // Add click event to equal sign
