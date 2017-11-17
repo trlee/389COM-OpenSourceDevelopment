@@ -1,10 +1,6 @@
 /*
 TODO:
-    Add calculations process
-    Do not allow multiple decimal point inputs
-    Do not allow values to be divided by zero, show error msg
     Add an answer storing variable
-    Add formula list
 */
 
 (function () {
@@ -19,6 +15,10 @@ TODO:
 
     // Variables
     var viewer = el("#viewer"), // Calculator screen where result is displayed
+      warning = el("#warning"), //Warning or Error message
+      formulaDisplay = el("#formulaDisplay"), //Formula Display Message
+      formulaList = el("#formulaList"), //List of Formulae
+      check = el("#check"), //Check Formula Button
       equals = el("#equals"), // Equal button
       nums = el(".num"), // List of numbers
       ops = el(".ops"), // List of operators
@@ -78,10 +78,12 @@ TODO:
         // If NaN or Infinity returned
         if (!isFinite(resultNum)) {
             if (isNaN(resultNum)) {
-                resultNum = "Please do not use two operands in a single calculation";
+                resultNum = "";
+                warning.innerHTML = "Warning: Please do not use two operands in a single calculation";
             }
             else {
-                resultNum = "Please do not divide by 0";
+                resultNum = "";
+                warning.innerHTML = "Warning: Please do not divide by 0";
             }
         }
         // Display result, finally!
@@ -117,5 +119,34 @@ TODO:
 
     // Add click event to clear button
     el("#clear").onclick = clearAll;
+
+    var changeFormula = function ()
+    {
+        if (formulaList.value == "BMI")
+        {
+            formulaDisplay.innerHTML = "Weight / (Height * Height)";
+        }
+        else if (formulaList.value == "AreaCircle")
+        {
+            formulaDisplay.innerHTML = "3.142 * (radius * radius)";
+        }
+        else if (formulaList.value == "PerimeterCircle") {
+            formulaDisplay.innerHTML = "2 * 3.142 * radius";
+        }
+        else if (formulaList.value == "Density") {
+            formulaDisplay.innerHTML = "Mass / Volume";
+        }
+        else if (formulaList.value == "Velocity") {
+            formulaDisplay.innerHTML = "Distance / Time";
+        }
+        else if (formulaList.value == "Momentum") {
+            formulaDisplay.innerHTML = "Mass * Velocity";
+        }
+        else {
+            formulaDisplay.innerHTML = "Pick a Formula";
+        }
+    }
+    
+    check.onclick = changeFormula;
 
 }());

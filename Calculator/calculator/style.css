@@ -1,6 +1,7 @@
 html {
   background-attachment: fixed;
   color: #6cacc5;
+  text-align: center;
 }
 
 body {
@@ -23,8 +24,8 @@ h1 {
   -webkit-text-fill-color: transparent;
   color: #000000;
   font-weight: 400;
-  margin: 0 auto 6em;
-  max-width: 9em;
+  margin: 0 auto 0em;
+  max-width: 10em;
 }
 
 .calculator {
@@ -56,7 +57,7 @@ h1 {
   text-align: right;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 6em;
+  width: 8em;
   height: 3em;
 }
 
@@ -68,9 +69,9 @@ button {
   float: left;
   font: inherit;
   font-size: large;
-  margin: 0.2em;
-  width: 1.2em;
-  height: 1.2em;
+  margin: 0em;
+  width: 2em;
+  height: 2em;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
