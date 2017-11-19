@@ -22,10 +22,13 @@ TODO:
       equals = el("#equals"), // Equal button
       nums = el(".num"), // List of numbers
       ops = el(".ops"), // List of operators
+      prevAns = el("#prevAns"),
       currentNum = "", // Current number
       oldNum = "", // First number
-      resultNum, // Result
+      resultNum = "", // Result
+      prevAnsNum = "", // Previous Answer
       operator; // Operand
+
     // When: Number is clicked. Get the current number selected
     var setNum = function ()
     {
@@ -35,11 +38,25 @@ TODO:
             resultNum = "";
         }
         else
-        { // Otherwise, add digit to previous number (this is a string!)
+        { // Otherwise, add digit to previous number
             currentNum += this.getAttribute("data-num");
         }
         viewer.innerHTML = currentNum; // Display current number
     };
+
+    // When: Previous Answer is clicked, get the previous result.
+    var setPrevAns = function ()
+    {
+        if (prevAnsNum == "")
+        {
+            currentNum = "0";
+        }
+        else
+        {
+            currentNum = prevAnsNum;
+        }
+        viewer.innerHTML = currentNum;
+    }
 
     // When: Operator is clicked. Pass number to oldNum and save operator
     var moveNum = function ()
@@ -89,12 +106,13 @@ TODO:
         // Display result, finally!
         viewer.innerHTML = resultNum;
         equals.setAttribute("data-result", resultNum);
-        // Now reset oldNum & keep result
+        // Now reset oldNum & keep result, set previous answer as result
         oldNum = 0;
         currentNum = resultNum;
+        prevAnsNum = resultNum;
     };
 
-    // When: Clear button is pressed. Clear everything
+    // When: Clear button is pressed. Clear everything, except previous answer
     var clearAll = function ()
     {
         oldNum = "";
@@ -117,9 +135,13 @@ TODO:
     // Add click event to equal sign
     equals.onclick = displayResults;
 
+    // Ass click event to previous answer
+    prevAns.onclick = setPrevAns;
+
     // Add click event to clear button
     el("#clear").onclick = clearAll;
 
+    // Showing formula on the calculator based on user choice
     var changeFormula = function ()
     {
         if (formulaList.value == "BMI")
@@ -147,6 +169,7 @@ TODO:
         }
     }
     
+    // Add click event for to GO! button
     check.onclick = changeFormula;
 
 }());
