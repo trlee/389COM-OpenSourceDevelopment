@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form builder</title>
+  
+  
+ 
+  
+ 
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+          
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+           
+     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel="stylesheet" type='text/css'>
+     
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+     
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ 
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+      
+  $( function() {
+   
+ 
+    dialog = $( "#dialog-form" ).dialog({
+     
+      autoOpen: false,
+      height:500,
+      width: 450,
+    
+    });
+    
+ 
+    form = dialog.find( "form" ).on( "submit", function( event ) {
+      event.preventDefault();
+      addUser();
+    });
+ 
+    $( "#create-form" ).button().on( "click", function() {
+      dialog.dialog( "open" );
+    });
+    
+    
+  } );
+  </script>
+  
+  <script>
+        var x=1;
+         var $comp = {
+    "textbox": "<input type='text' class='form-control'  id='tst_new'><br/>",
+    
+    
+};
+
+  var y=1;
+   var $comp2 = {
+    "button": "<input type='button' class='form-control btn btn-success'  id='tst_new2' value='Submit'><br/><br/>",
+    
+    
+};
+
+       function addTextBox()
+    {
+       var d = document.getElementById('dialog-form');
+       //d.innerHTML += "<input type='text' class='form-control'  id=' tst "+ x++ +" '><br /><br/>";
+       d.innerHTML += $comp.textbox;
+       $("#tst_new").attr("id", "tst_"+ x++);
+       
+     }
+     
+    
+    function addButton()
+    {
+       var d = document.getElementById('dialog-form');
+       //d.innerHTML += "<input type='text' class='form-control'  id=' tst "+ x++ +" '><br /><br/>";
+       d.innerHTML += $comp2.button;
+       $("#tst_new2").attr("id", "tst_"+ y++);
+       
+     }
+     
+     
+
+</script>
+ 
+</head>
+<body>
+ 
+<div id= "dialog-form" title="Form" class="bg-info text-white">
+
+ 
+ 
+  <form id="myform"  >  
+               
+            <button onclick ="addTextBox()" value="Add Text Box" type="button" class="btn btn-default" >Add Text Box </button>
+            
+             <button onclick ="addButton()" value="Add Button" type="button" class="btn btn-default" >Add Button </button>
+             
+                 
+ 
+             
+             <br/> <br/>
+
+  </form>
+ <button type="submit" id="save">Save to JSON format</button> 
+
+</div>
+
+ <button id="create-form" class="btn btn-default   "  >Add new form</button>
+
+</body>
+</html>

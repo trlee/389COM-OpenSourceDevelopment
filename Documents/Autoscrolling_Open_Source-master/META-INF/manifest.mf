@@ -1,0 +1,87 @@
+Manifest-Version: 1.0
+
+Name: CHNAGELOG.md
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: DVArsf7uG9q3OvT7Sq4RIw==
+SHA1-Digest: fgbVQa3S8pg+kcH2dR/gc6E0H2Q=
+
+Name: manifest.json
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: R2xuQZnIkG2v+qbVN6umOw==
+SHA1-Digest: JPxlUq7BS0WzmtiGQUTaZkckCVU=
+
+Name: README.md
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: lqD03StRxqqNTN8NNTctlw==
+SHA1-Digest: iVpADNKHKCj8g3TkQGuBG+Jt+fM=
+
+Name: dist/background.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: zVZzkzNyy6V67dhtLrxzMg==
+SHA1-Digest: wSIunnzlIGOmGW0g/aiT6Y8OX2M=
+
+Name: dist/content.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: J3j4kgVoqI8UATeorULIPg==
+SHA1-Digest: n4FjZ2jOPmEcU/CqLSbAHG5DKoQ=
+
+Name: dist/index.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: K0KBYZBIhfW8eyG6NjF7Sw==
+SHA1-Digest: V1XT4uluOQXeCxRUnvwEOlTOzL8=
+
+Name: dist/index.html
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: vXvyvg2COxoIKeQ0pFgBgg==
+SHA1-Digest: CXA2La6LP8vecrBABCQ3O5JtiAA=
+
+Name: dist/options.html
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 1lr3BuNIewD3RnF+NvSHOQ==
+SHA1-Digest: W37eApvI4bpp6KEUtrxIO0JNxGE=
+
+Name: dist/options.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: pZq7PA0qzvtLJ5YSbWLrbw==
+SHA1-Digest: /IV//lYVgItmX3jmjjSD4y7zvAM=
+
+Name: dist/popup.html
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: vGeyPc5G8DQOwrkq1MIxsw==
+SHA1-Digest: Se2Abwe2llgvxXjS4tuHb2WrZZQ=
+
+Name: dist/popup.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: TDLRrOgPKbBDHI2eaywPrA==
+SHA1-Digest: yw/T7qYwPvtWCu+QqKK1HXbWKVU=
+
+Name: icons/mouse-19.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: orrA01ya7EJzjfbOj9Zl8w==
+SHA1-Digest: Viuc7BIsFa3WmdR0N3+ZfF5ubZw=
+
+Name: icons/mouse-38.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: AuoLzBsECni9Lrzu8hmPvQ==
+SHA1-Digest: xl891awwC9D9YHHozzH6Y0xfU2c=
+
+Name: icons/mouse-48.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: MS+xzlnzTBg7TZjIARPM6Q==
+SHA1-Digest: jgEAm5fXuf1YMARQ8IR8kUhajgY=
+
+Name: icons/mouse-64.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: iXvB1Dw4ynBeNZkuDkOdXQ==
+SHA1-Digest: FgYgNB0FJj0v+wo9GzrBBUwUrMs=
+
+Name: icons/mouse-96.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: HySzJ6OpS5JYajksv10Uqg==
+SHA1-Digest: xMvskCyQaCoHsbIKVZWtDzL0EgU=
+
+Name: LICENSE
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 3mEQfgo+QyRLd/MNrRb0Ig==
+SHA1-Digest: ZIEU04BuF/eXvEfNDwmstsJPZlY=
+
